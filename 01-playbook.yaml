@@ -1,5 +1,5 @@
 - name: ping the server
-  hosts: local
+  hosts: froentend
   tasks:
   - name: ping the server
     ansible.biultin.ping:
