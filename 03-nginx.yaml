@@ -3,12 +3,12 @@
   baecome: yes
   tasks:
   - name: install nginx
-    ansible.builtin.package
+    ansible.builtin.package:
     name: nginx
     state: present
 
   - name: start nginx
-    ansible.builtin.server
+    ansible.builtin.server:
     name: nginx
     state: started
     enabled: yes
