@@ -1,0 +1,11 @@
+- name: Ansible variables
+  hosts: local
+  connection: local
+  vars:
+    COURSE: Devops
+    DURATION: 120 days
+    PLATFORM: joindevops.com
+  tasks:
+    - name: print course details
+        ansible.builtin.debug:
+          msg: "Hello, course is {{ COURSE }}, course duration is {{ DURATION }}, platform is {{ PLATFORM }}"
