@@ -1,0 +1,14 @@
+- name: pront course information
+  hosts: local
+  connection: local
+  vars:
+    COURSE: Devops
+    DURATION: 120 hours
+    PLATFORM: joindevops.com
+  tasks:
+  - name: print course details
+    vars:
+      COURSE: Ansible
+      Duration: 8 days
+    ansible.builtin.debug:
+     msg: "Hello, Course name is {{ COURSE }}, Duration is {{ DURATION}}, and the platform is {{ PLATFORM }} "
