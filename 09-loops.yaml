@@ -4,9 +4,9 @@
   tasks:
   - name: install packages
     ansible.builtin.package:
-      name: "{{ item }}"
-      state: installed
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
     loop:
-    - redis
-    - zip
-    - nginx
+    - { name: 'redis' , state: 'absent' }
+    - { name: 'zip' , state: 'present' }
+    - { name: 'nginx' , state: 'absent' }
